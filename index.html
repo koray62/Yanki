@@ -64,6 +64,11 @@ section[id]{scroll-margin-top:74px}
 section[id]{scroll-margin-top:66px}
 #ust{padding-top:40px!important;padding-bottom:64px!important}
 }
+@media (max-width:600px){
+.diff-card{padding:24px 20px!important;gap:24px!important}
+.diff-visual{padding:16px!important}
+.cmp-grid,.pair-grid{grid-template-columns:minmax(0,1fr)!important}
+}
 .plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 @media (max-width:860px){.plans{grid-template-columns:minmax(0,1fr)}}
 </style>
@@ -260,14 +265,14 @@ PR Riski · 2 haber
 <h2 style="margin: 0; font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.02em; max-width: 820px">Yalnızca markanızı değil gündemi de izler, aynı haberi iki kez önünüze koymaz.</h2>
 <div style="margin-top: 48px; display: flex; flex-direction: column; gap: 24px">
 
-<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 40px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px">
+<div class="diff-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 40px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px">
 <div style="flex: 1 1 380px; min-width: 0">
 <div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 15px; color: #C2410C">01 · Gündem takibi</div>
 <h3 style="margin: 12px 0 12px; font-family: Sora, sans-serif; font-size: 26px; font-weight: 600; line-height: 1.2">Markasız konu ve gündem takibi</h3>
 <p style="margin: 0; color: #475569; font-size: 16px">Takip için bir markanız olması gerekmez. “Bir bankanın üst yöneticisi için günlük bankacılık gündemi” gibi kısa bir brif yazın; Yankı hangi konuların aranacağını kendisi önerir ve gündemi düzenli olarak raporlar.</p>
 <p style="margin: 14px 0 0; color: #0B1220; font-size: 16px; font-weight: 600">Yönetici bültenleri ve strateji ekipleri için.</p>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; background: #F7F8FA; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px">
+<div class="diff-visual" style="flex: 1 1 420px; min-width: 0; background: #F7F8FA; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px">
 <div style="font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em">Gündem brifi</div>
 <p style="margin: 8px 0 0; padding: 14px 16px; background: #FFFFFF; border: 1px solid #CBD2DC; border-radius: 10px; font-size: 15px">Bir bankanın üst yöneticisi için günlük bankacılık gündemi</p>
 <div style="margin: 20px 0 10px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#C2410C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><path d="M12 8l1.5 2.5L16 12l-2.5 1.5L12 16l-1.5-2.5L8 12l2.5-1.5z"></path></svg>Yapay zekânın önerdiği arama konuları</div>
@@ -283,40 +288,40 @@ PR Riski · 2 haber
 </div>
 </div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 40px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px">
+<div class="diff-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 40px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px">
 <div style="flex: 1 1 380px; min-width: 0">
 <div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 15px; color: #C2410C">02 · Seçili yayınlar</div>
 <h3 style="margin: 12px 0 12px; font-family: Sora, sans-serif; font-size: 26px; font-weight: 600; line-height: 1.2">Ulusal ve uluslararası seçili yayınlar</h3>
 <p style="margin: 0; color: #475569; font-size: 16px">Reuters, Financial Times, Bloomberg, Bloomberg HT ve Dünya özel olarak taranır. Uluslararası yayınlarda arama İngilizce anahtar kelimelerle yapılır; yabancı basında çıkan haberler de gözden kaçmaz.</p>
 <p style="margin: 14px 0 0; font-size: 13px; color: #64748B">* Haber detaylarına ulaşmak için ilgili kaynağa bireysel/kurumsal abonelik gerekebilir.</p>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; background: #F7F8FA; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+<div class="diff-visual" style="flex: 1 1 420px; min-width: 0; background: #F7F8FA; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
 <div>
 <div style="font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em">Uluslararası · İngilizce anahtar kelimeler</div>
-<div style="margin-top: 10px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
-<div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 14px 10px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Reuters</div>
-<div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 14px 10px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Financial Times</div>
-<div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 14px 10px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Bloomberg</div>
+<div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px">
+<div style="flex: 1 1 auto; white-space: nowrap; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 12px 16px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Reuters</div>
+<div style="flex: 1 1 auto; white-space: nowrap; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 12px 16px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Financial Times</div>
+<div style="flex: 1 1 auto; white-space: nowrap; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 12px 16px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Bloomberg</div>
 </div>
 </div>
 <div>
 <div style="font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em">Ulusal · Türkçe anahtar kelimeler</div>
-<div style="margin-top: 10px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 14px 10px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Bloomberg HT</div>
-<div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 14px 10px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Dünya</div>
+<div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px">
+<div style="flex: 1 1 auto; white-space: nowrap; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 12px 16px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Bloomberg HT</div>
+<div style="flex: 1 1 auto; white-space: nowrap; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 12px 16px; text-align: center; font-family: Sora, sans-serif; font-weight: 600; font-size: 15px">Dünya</div>
 </div>
 </div>
 </div>
 </div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 40px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px">
+<div class="diff-card" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 40px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px">
 <div style="flex: 1 1 380px; min-width: 0">
 <div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 15px; color: #C2410C">03 · Tekrarsız raporlama</div>
 <h3 style="margin: 12px 0 12px; font-family: Sora, sans-serif; font-size: 26px; font-weight: 600; line-height: 1.2">Her raporda yalnızca yeni olan</h3>
 <p style="margin: 0; color: #475569; font-size: 16px">Önceki raporlarda yer alan bir haber tekrar raporlanmaz. Gelişmeye devam eden haberler “Devam ediyor” olarak işaretlenir; her rapor gerçekten yeni bilgiyle başlar.</p>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; background: #F7F8FA; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px">
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<div class="diff-visual" style="flex: 1 1 420px; min-width: 0; background: #F7F8FA; border: 1px solid #E2E6EC; border-radius: 14px; padding: 24px">
+<div class="cmp-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
 <div style="display: flex; flex-direction: column; gap: 10px">
 <div style="font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.05em">Dünkü rapor</div>
 <div style="background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 10px; padding: 12px"><span style="display: inline-block; background: #0B1220; color: #FFFFFF; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px">Yeni</span><div style="margin-top: 6px; font-size: 14px; font-weight: 600">Faiz kararı sonrası kredi fiyatlaması</div></div>
@@ -340,11 +345,11 @@ PR Riski · 2 haber
 <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
 <h2 style="margin: 0; font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.02em">Adı medyada geçen herkes için.</h2>
 <div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 16px">
-<div style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div class="pair-grid" style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
 <div style="padding: 24px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px"><h3 style="margin: 0 0 8px; font-size: 17px; font-weight: 600">Kurumsal iletişim ekipleri</h3><p style="margin: 0; color: #475569; font-size: 15px">Günlük medya raporunu elle hazırlamak yerine her sabah hazır alır; krize dönüşebilecek haberleri saatler içinde görür.</p></div>
 <div style="padding: 24px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px"><h3 style="margin: 0 0 8px; font-size: 17px; font-weight: 600">KOBİ'ler</h3><p style="margin: 0; color: #475569; font-size: 15px">Ajans bütçesi olmadan markası ve rakipleri hakkında düzenli bilgi edinir.</p></div>
 </div>
-<div style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div class="pair-grid" style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
 <div style="padding: 24px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px"><h3 style="margin: 0 0 8px; font-size: 17px; font-weight: 600">Yöneticiler ve kamuya açık kişiler</h3><p style="margin: 0; color: #475569; font-size: 15px">Kişisel adı üzerinden yazılanları takip eder, itibarını zedeleyebilecek içeriği erken fark eder.</p></div>
 <div style="padding: 24px; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 14px"><h3 style="margin: 0 0 8px; font-size: 17px; font-weight: 600">Üst yönetim ve strateji ekipleri</h3><p style="margin: 0; color: #475569; font-size: 15px">Markadan bağımsız sektör gündemini düzenli bir bülten olarak alır; rakip hamlelerini avantaj/dezavantaj gözüyle izler.</p></div>
 </div>
@@ -360,11 +365,11 @@ PR Riski · 2 haber
 <h2 style="margin: 18px 0 0; font-family: Sora, sans-serif; font-weight: 700; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.02em; color: #FFFFFF">Verileriniz ve anahtarlarınız sizin kontrolünüzde.</h2>
 </div>
 <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 28px; text-align: center">
-<div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
+<div class="pair-grid" style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
 <div><h3 style="margin: 0 0 6px; font-size: 17px; font-weight: 600; color: #FFFFFF">Şifrelenmiş anahtar saklama</h3><p style="margin: 0; font-size: 15px; color: #B6C0CE">AI API anahtarlarınız veritabanında şifrelenmiş olarak tutulur ve arayüzde hiçbir zaman açık hâliyle gösterilmez.</p></div>
 <div><h3 style="margin: 0 0 6px; font-size: 17px; font-weight: 600; color: #FFFFFF">Kendi sağlayıcınız</h3><p style="margin: 0; font-size: 15px; color: #B6C0CE">Analiz, kurumunuzun onayladığı yapay zekâ sağlayıcısında yapılır; veri akışını siz belirlersiniz.</p></div>
 </div>
-<div style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
+<div class="pair-grid" style="flex: 1 1 440px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
 <div><h3 style="margin: 0 0 6px; font-size: 17px; font-weight: 600; color: #FFFFFF">Hesap izolasyonu</h3><p style="margin: 0; font-size: 15px; color: #B6C0CE">Her müşterinin takip profilleri, haberleri ve raporları diğer hesaplardan tamamen ayrıdır.</p></div>
 <div><h3 style="margin: 0 0 6px; font-size: 17px; font-weight: 600; color: #FFFFFF">KVKK uyumu</h3><p style="margin: 0; font-size: 15px; color: #B6C0CE">Kişisel veriler 6698 sayılı Kanun kapsamında işlenir; veri saklama süreleri ve silme talepleri aydınlatma metninde tanımlanır.</p></div>
 </div>
