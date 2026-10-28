@@ -1,7 +1,7 @@
 // Demo talep formunu Turkticaret.net SMTP üzerinden e-postaya dönüştüren Vercel fonksiyonu.
 // Gerekli ortam değişkenleri (Vercel > Settings > Environment Variables):
 //   SMTP_HOST, SMTP_PORT (465 veya 587), SMTP_USER, SMTP_PASS
-// İsteğe bağlı: MAIL_FROM (varsayılan SMTP_USER), DEMO_TO (varsayılan info@noratech.com.tr)
+// İsteğe bağlı: MAIL_FROM (varsayılan "Yankı <SMTP_USER>"), DEMO_TO (varsayılan info@noratech.com.tr)
 const nodemailer = require('nodemailer');
 
 const LIMITS = { ad: 120, kurum: 160, eposta: 200, telefon: 40, hedef: 300 };
@@ -52,7 +52,7 @@ module.exports = async function handler(req, res) {
   }
   const port = Number(SMTP_PORT || 587);
   const to = process.env.DEMO_TO || 'info@noratech.com.tr';
-  const from = process.env.MAIL_FROM || SMTP_USER;
+  const from = process.env.MAIL_FROM || { name: 'Yankı', address: SMTP_USER };
 
   const transporter = nodemailer.createTransport({
     host: SMTP_HOST,

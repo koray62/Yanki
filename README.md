@@ -39,7 +39,7 @@ Vercel'de **Project → Settings → Environment Variables** altına şu değiş
 | `SMTP_PORT` | `465` (SSL) veya `587` (STARTTLS) | Turkticaret'in önerdiği port |
 | `SMTP_USER` | `info@noratech.com.tr` | Gönderen e-posta hesabı |
 | `SMTP_PASS` | — | Bu hesabın şifresi |
-| `MAIL_FROM` | `Yankı <info@noratech.com.tr>` | İsteğe bağlı, varsayılan `SMTP_USER` |
+| `MAIL_FROM` | `Yankı <info@noratech.com.tr>` | İsteğe bağlı; girilmezse gönderen adı "Yankı", adresi `SMTP_USER` olur |
 | `DEMO_TO` | `info@noratech.com.tr` | İsteğe bağlı, talebin gideceği adres |
 
 Sorun olursa Vercel'de **Deployments → (son yayın) → Functions → api/demo** loglarına bakın: `SMTP ayarları eksik` ya da `gönderim hatası` satırı nedeni gösterir.
