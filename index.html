@@ -36,6 +36,34 @@ summary{cursor:pointer;list-style:none}
 summary::-webkit-details-marker{display:none}
 details[open] .faq-plus{transform:rotate(45deg)}
 input,textarea{font:inherit}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(247,248,250,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid #E2E6EC}
+.nav{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0B1220;min-width:0}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-name{font-family:Sora,sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em}
+.brand-tag{font-size:12px;font-weight:500;color:#64748B}
+.nav-links{display:flex;align-items:center;gap:24px;font-size:15px;font-weight:500}
+.nav-links a{color:#334155;text-decoration:none}
+.nav-links a:hover{color:#0B1220}
+.nav-links .nav-cta{background:#0B1220;color:#FFFFFF;padding:11px 18px;border-radius:8px;font-weight:600}
+.nav-links .nav-cta:hover{color:#FFFFFF;background:#1E293B}
+.menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;flex:none;border:1px solid #CBD2DC;border-radius:10px;background:#FFFFFF;color:#0B1220;cursor:pointer;padding:0}
+.menu-btn .i-close{display:none}
+.menu-btn[aria-expanded="true"] .i-open{display:none}
+.menu-btn[aria-expanded="true"] .i-close{display:block}
+section[id]{scroll-margin-top:74px}
+@media (max-width:960px){
+.nav{padding:10px 16px}
+.brand-name{font-size:20px}
+.brand-tag{font-size:11.5px}
+.menu-btn{display:inline-flex}
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 16px;background:#FFFFFF;border-bottom:1px solid #E2E6EC;box-shadow:0 16px 32px -16px rgba(11,18,32,.25);font-size:17px}
+.nav-links.open{display:flex}
+.nav-links a{padding:14px 4px;border-bottom:1px solid #EEF1F5}
+.nav-links .nav-cta{margin-top:12px;text-align:center;border-bottom:0;padding:14px 18px}
+section[id]{scroll-margin-top:66px}
+#ust{padding-top:40px!important;padding-bottom:64px!important}
+}
 .plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 @media (max-width:860px){.plans{grid-template-columns:minmax(0,1fr)}}
 </style>
@@ -44,19 +72,23 @@ input,textarea{font:inherit}
 <div style="font-family: Inter, system-ui, sans-serif; color: #0B1220; background: #F7F8FA; line-height: 1.55; font-size: 17px">
 
 <!-- NAV -->
-<header style="position: sticky; top: 0; z-index: 10; background: rgba(247,248,250,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E2E6EC">
-<nav aria-label="Ana menü" style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#ust" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0B1220">
+<header class="site-header">
+<nav aria-label="Ana menü" class="nav">
+<a href="#ust" class="brand">
 <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true" fill="none" stroke="#C2410C" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="15" r="3" fill="#C2410C" stroke="none"></circle><path d="M15 9a8.5 8.5 0 0 1 0 12"></path><path d="M20 5a14 14 0 0 1 0 20"></path></svg>
-<span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-family: Sora, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em">Yankı</span><span style="font-size: 12px; font-weight: 500; color: #64748B">Gürültüyü değil, önemli olanı duyun.</span></span>
+<span class="brand-text"><span class="brand-name">Yankı</span><span class="brand-tag">Gürültüyü değil, önemli olanı duyun.</span></span>
 </a>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 500">
-<a href="#ozellikler" style="color: #334155; text-decoration: none">Özellikler</a>
-<a href="#nasil" style="color: #334155; text-decoration: none">Nasıl çalışır</a>
-<a href="#paketler" style="color: #334155; text-decoration: none">Paketler</a>
-<a href="#guvenlik" style="color: #334155; text-decoration: none">Güvenlik</a>
-<a href="#sss" style="color: #334155; text-decoration: none">SSS</a>
-<a href="#demo" style="background: #0B1220; color: #FFFFFF; text-decoration: none; padding: 11px 18px; border-radius: 8px; font-weight: 600">Demo talep edin</a>
+<button type="button" class="menu-btn" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav-links">
+<svg class="i-open" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+<svg class="i-close" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+</button>
+<div id="nav-links" class="nav-links">
+<a href="#ozellikler">Özellikler</a>
+<a href="#nasil">Nasıl çalışır</a>
+<a href="#paketler">Paketler</a>
+<a href="#guvenlik">Güvenlik</a>
+<a href="#sss">SSS</a>
+<a href="#demo" class="nav-cta">Demo talep edin</a>
 </div>
 </nav>
 </header>
@@ -476,6 +508,23 @@ PR Riski · 2 haber
       .catch(function () { show('Bağlantı hatası. Lütfen tekrar deneyin veya info@noratech.com.tr adresine yazın.', false); })
       .then(function () { btn.disabled = false; btn.textContent = label; btn.style.opacity = ''; });
   });
+})();
+</script>
+<script>
+(function () {
+  var btn = document.querySelector('.menu-btn');
+  var links = document.getElementById('nav-links');
+  if (!btn || !links) return;
+  function setOpen(open) {
+    links.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+  }
+  btn.addEventListener('click', function () { setOpen(!links.classList.contains('open')); });
+  links.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+  document.addEventListener('click', function (e) { if (!e.target.closest('.nav')) setOpen(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 960) setOpen(false); });
 })();
 </script>
 </body>
