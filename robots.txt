@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://yanki-three.vercel.app/sitemap.xml
+Sitemap: https://www.yankitoday.com/sitemap.xml

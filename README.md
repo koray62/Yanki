@@ -51,7 +51,7 @@ Sorun olursa Vercel'de **Deployments → (son yayın) → Functions → api/demo
 
 ## Alan adı değişirse
 
-Site şu an `https://yanki-three.vercel.app` adresine göre ayarlı. Kendi alan adınıza geçtiğinizde bu adresi tüm dosyalarda yeni adresle değiştirin: `index.html` ve yasal sayfalardaki `canonical`, `og:url`, `og:image` ve yapılandırılmış veri (JSON-LD), ayrıca `robots.txt` ve `sitemap.xml`.
+Site `https://www.yankitoday.com` adresine göre ayarlı. Kendi alan adınıza geçtiğinizde bu adresi tüm dosyalarda yeni adresle değiştirin: `index.html` ve yasal sayfalardaki `canonical`, `og:url`, `og:image` ve yapılandırılmış veri (JSON-LD), ayrıca `robots.txt` ve `sitemap.xml`.
 
 ## Arama motorlarına kayıt
 
