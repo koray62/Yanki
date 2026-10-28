@@ -14,7 +14,7 @@ Site iki dillidir: **İngilizce** ana adreste (`/`), **Türkçe** `/tr/` altınd
 | `tr/kvkk.html`, `tr/gizlilik.html`, `tr/cerez-politikasi.html`, `tr/kullanim-kosullari.html` | Türkçe yasal sayfalar |
 | `tools/build_legal.py` | Yasal sayfaları iki dilde üreten betik |
 | `vercel.json` | Eski Türkçe yasal sayfa adreslerinden `/tr/` altına kalıcı yönlendirmeler |
-| `yanki-ornek-rapor.pdf` | "Örnek raporu indirin" butonlarının indirdiği örnek rapor (Türkçe, kurgusal veriler) |
+| `yanki-ornek-rapor.pdf`, `yanki-sample-report.pdf` | Türkçe ve İngilizce sayfalardaki "örnek rapor" butonlarının indirdiği raporlar (kurgusal veriler) |
 | `404.html` | Bulunamayan sayfalar için hata sayfası |
 | `robots.txt`, `sitemap.xml` | Arama motorları için tarama kuralları ve iki dilli site haritası |
 | `og-image.png`, `og-image-en.png` | Türkçe ve İngilizce paylaşım önizleme görselleri (1200×630) |
