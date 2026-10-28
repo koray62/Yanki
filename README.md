@@ -31,6 +31,6 @@ npx serve .
 
 - [ ] **Abonelik Başlat** (Pro paketi) butonu uygulama yayına girene kadar geçici olarak demo formuna (`#demo`) gidiyor. Uygulama adresi netleşince `<uygulama adresi>/register?plan=pro` olarak güncellenmeli.
 - [ ] **Demo talep formu** henüz bir sunucuya bağlı değil. Bir form servisi (Formspree, Vercel fonksiyonu vb.) ya da uygulamanın API'si ile bağlanmalı.
-- [ ] Yasal sayfalardaki kalan köşeli parantezli alanlar doldurulmalı: KVKK metnindeki veri saklama süreleri ve Çerez Politikası'ndaki tercih çerezi süresi.
+- [ ] Uygulamada KVKK metnindeki saklama süreleri otomatik silme olarak uygulanmalı: hesap verileri kapanıştan itibaren 12 ay, taranan içerik ve raporlar 6 ay, demo talepleri 6 ay, tercih çerezi en fazla 12 ay.
 - [ ] Yasal metinler yayına almadan önce bir hukukçu tarafından gözden geçirilmeli.
 - [ ] Sitede analitik veya pazarlama çerezi kullanılmaya başlanırsa çerez onay penceresi eklenmeli ve Çerez Politikası güncellenmeli.
