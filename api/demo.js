@@ -37,6 +37,7 @@ module.exports = async function handler(req, res) {
   const data = {};
   for (const [k, max] of Object.entries(LIMITS)) data[k] = clean(body[k], max);
   const kvkk = body.kvkk === true || body.kvkk === 'on' || body.kvkk === 'true';
+  const lang = body.lang === 'en' ? 'EN' : 'TR';
 
   const missing = [];
   if (!data.ad) missing.push('ad');
@@ -67,6 +68,7 @@ module.exports = async function handler(req, res) {
     ['E-posta', data.eposta],
     ['Telefon', data.telefon || '—'],
     ['Takip edilmek istenen', data.hedef || '—'],
+    ['Site dili', lang === 'EN' ? 'İngilizce' : 'Türkçe'],
     ['KVKK aydınlatma', 'Okundu olarak işaretlendi'],
     ['Tarih', new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' })],
   ];
@@ -76,7 +78,7 @@ module.exports = async function handler(req, res) {
       from,
       to,
       replyTo: data.eposta,
-      subject: `Yankı demo talebi: ${data.kurum} — ${data.ad}`,
+      subject: `Yankı demo talebi [${lang}]: ${data.kurum} — ${data.ad}`,
       text: rows.map(([k, v]) => `${k}: ${v}`).join('\n'),
       html:
         '<h2 style="font-family:sans-serif">Yeni demo talebi</h2><table style="font-family:sans-serif;border-collapse:collapse">' +

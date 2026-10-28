@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { "source": "/kvkk.html", "destination": "/tr/kvkk.html", "permanent": true },
+    { "source": "/gizlilik.html", "destination": "/tr/gizlilik.html", "permanent": true },
+    { "source": "/cerez-politikasi.html", "destination": "/tr/cerez-politikasi.html", "permanent": true },
+    { "source": "/kullanim-kosullari.html", "destination": "/tr/kullanim-kosullari.html", "permanent": true },
+    { "source": "/tr", "destination": "/tr/", "permanent": true }
+  ]
+}
