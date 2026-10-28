@@ -25,7 +25,7 @@ npx serve .
 
 ## Yayın sonrası yapılacaklar
 
-- [ ] **Abonelik Başlat** (Pro paketi) butonu şu an `/register?plan=pro` göreli adresine gidiyor. Uygulamanın yayın adresi netleşince tam adresle güncellenmeli (`index.html` içinde `href="/register?plan=pro"`).
+- [ ] **Abonelik Başlat** (Pro paketi) butonu uygulama yayına girene kadar geçici olarak demo formuna (`#demo`) gidiyor. Uygulama adresi netleşince `<uygulama adresi>/register?plan=pro` olarak güncellenmeli.
 - [ ] **Demo talep formu** henüz bir sunucuya bağlı değil. Bir form servisi (Formspree, Vercel fonksiyonu vb.) ya da uygulamanın API'si ile bağlanmalı.
 - [ ] Footer'daki **[Şirket unvanı]** alanı doldurulmalı.
 - [ ] **KVKK Aydınlatma Metni, Gizlilik, Çerez Politikası ve Kullanım Koşulları** sayfaları hazırlanıp footer bağlantıları güncellenmeli.
