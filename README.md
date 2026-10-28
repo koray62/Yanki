@@ -12,6 +12,11 @@ Yankı medya takip ve itibar riski platformunun tanıtım (landing) sayfası. De
 | `gizlilik.html` | Gizlilik Politikası |
 | `cerez-politikasi.html` | Çerez Politikası |
 | `kullanim-kosullari.html` | Kullanım Koşulları |
+| `404.html` | Bulunamayan sayfalar için hata sayfası |
+| `robots.txt`, `sitemap.xml` | Arama motorları için tarama kuralları ve site haritası |
+| `og-image.png` | Paylaşım önizleme görseli (1200×630) |
+| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Tarayıcı ve telefon simgeleri |
+| `api/demo.js` | Demo formunu e-postaya ileten Vercel fonksiyonu |
 
 ## Yerelde açma
 
@@ -43,6 +48,15 @@ Vercel'de **Project → Settings → Environment Variables** altına şu değiş
 | `DEMO_TO` | `info@noratech.com.tr` | İsteğe bağlı, talebin gideceği adres |
 
 Sorun olursa Vercel'de **Deployments → (son yayın) → Functions → api/demo** loglarına bakın: `SMTP ayarları eksik` ya da `gönderim hatası` satırı nedeni gösterir.
+
+## Alan adı değişirse
+
+Site şu an `https://yanki-three.vercel.app` adresine göre ayarlı. Kendi alan adınıza geçtiğinizde bu adresi tüm dosyalarda yeni adresle değiştirin: `index.html` ve yasal sayfalardaki `canonical`, `og:url`, `og:image` ve yapılandırılmış veri (JSON-LD), ayrıca `robots.txt` ve `sitemap.xml`.
+
+## Arama motorlarına kayıt
+
+1. [Google Search Console](https://search.google.com/search-console)'da siteyi ekleyin, alan adı doğrulamasını yapın ve `sitemap.xml` adresini gönderin.
+2. [Bing Webmaster Tools](https://www.bing.com/webmasters)'ta aynı işlemi yapın; Search Console'dan içe aktarma seçeneği vardır.
 
 ## Yayın sonrası yapılacaklar
 
