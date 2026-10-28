@@ -392,15 +392,17 @@ PR Riski · 2 haber
 </div>
 <p style="margin: 16px 0 0; font-size: 15px; color: #475569">Önce görmek mi istersiniz? Formu doldurun, size özel bir demo planlayalım.</p>
 </div>
-<form aria-label="Demo talep formu" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px">
+<form id="demo-form" action="/api/demo" method="post" novalidate aria-label="Demo talep formu" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E6EC; border-radius: 18px; padding: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px">
 <h3 style="grid-column: 1 / -1; margin: 0; font-family: Sora, sans-serif; font-size: 22px; font-weight: 600">Demo talep edin</h3>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Ad soyad<input type="text" name="ad" autocomplete="name" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Kurum<input type="text" name="kurum" autocomplete="organization" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">E-posta<input type="email" name="eposta" autocomplete="email" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Telefon <span style="font-weight: 400; color: #64748B">(isteğe bağlı)</span><input type="tel" name="telefon" autocomplete="tel" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
-<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Takip etmek istediğiniz marka veya kişi<input type="text" name="hedef" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
-<label style="grid-column: 1 / -1; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #475569"><input type="checkbox" name="kvkk" style="width: 20px; height: 20px; margin: 1px 0 0; flex: none"><span><a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
-<button type="submit" style="grid-column: 1 / -1; background: #0B1220; color: #FFFFFF; border: 0; padding: 15px 20px; border-radius: 10px; font-weight: 600; font-size: 16px; cursor: pointer">Demo talebini gönder</button>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Ad soyad<input type="text" name="ad" autocomplete="name" required maxlength="120" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Kurum<input type="text" name="kurum" autocomplete="organization" required maxlength="160" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">E-posta<input type="email" name="eposta" autocomplete="email" required maxlength="200" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Telefon <span style="font-weight: 400; color: #64748B">(isteğe bağlı)</span><input type="tel" name="telefon" autocomplete="tel" maxlength="40" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
+<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Takip etmek istediğiniz marka veya kişi<input type="text" name="hedef" maxlength="300" style="padding: 12px 14px; border: 1px solid #CBD2DC; border-radius: 8px; font-size: 16px; font-weight: 400"></label>
+<label style="grid-column: 1 / -1; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #475569"><input type="checkbox" name="kvkk" required style="width: 20px; height: 20px; margin: 1px 0 0; flex: none"><span><a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni okudum.</span></label>
+<div aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden"><label>Web sitesi<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<p id="demo-status" role="status" aria-live="polite" style="grid-column: 1 / -1; margin: 0; font-size: 15px; display: none"></p>
+<button id="demo-submit" type="submit" style="grid-column: 1 / -1; background: #0B1220; color: #FFFFFF; border: 0; padding: 15px 20px; border-radius: 10px; font-weight: 600; font-size: 16px; cursor: pointer">Demo talebini gönder</button>
 </form>
 </section>
 
@@ -423,5 +425,38 @@ PR Riski · 2 haber
 </footer>
 
 </div>
+<script>
+(function () {
+  var form = document.getElementById('demo-form');
+  if (!form) return;
+  var status = document.getElementById('demo-status');
+  var btn = document.getElementById('demo-submit');
+  var label = btn.textContent;
+  function show(msg, ok) {
+    status.textContent = msg;
+    status.style.display = 'block';
+    status.style.color = ok ? '#166534' : '#991B1B';
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements;
+    if (!f.ad.value.trim() || !f.kurum.value.trim()) return show('Lütfen ad soyad ve kurum alanlarını doldurun.', false);
+    if (!f.eposta.checkValidity() || !f.eposta.value.trim()) return show('Lütfen geçerli bir e-posta adresi girin.', false);
+    if (!f.kvkk.checked) return show('Devam etmek için KVKK Aydınlatma Metni\'ni okuduğunuzu işaretleyin.', false);
+    var data = {};
+    ['ad', 'kurum', 'eposta', 'telefon', 'hedef', 'website'].forEach(function (k) { data[k] = f[k].value; });
+    data.kvkk = true;
+    btn.disabled = true; btn.textContent = 'Gönderiliyor…'; btn.style.opacity = '0.7';
+    fetch('/api/demo', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.ok }; }); })
+      .then(function (r) {
+        if (r.ok) { form.reset(); show('Teşekkürler! Talebiniz bize ulaştı, en kısa sürede sizinle iletişime geçeceğiz.', true); }
+        else show('Talebiniz gönderilemedi. Lütfen biraz sonra tekrar deneyin veya info@noratech.com.tr adresine yazın.', false);
+      })
+      .catch(function () { show('Bağlantı hatası. Lütfen tekrar deneyin veya info@noratech.com.tr adresine yazın.', false); })
+      .then(function () { btn.disabled = false; btn.textContent = label; btn.style.opacity = ''; });
+  });
+})();
+</script>
 </body>
 </html>

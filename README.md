@@ -27,10 +27,26 @@ npx serve .
 2. Framework Preset: **Other**. Build Command ve Output Directory boş kalabilir.
 3. **Deploy**'a basın. Site `main` dalına yapılan her gönderimde otomatik güncellenir.
 
+## Demo talep formu (e-posta gönderimi)
+
+Form, `api/demo.js` Vercel fonksiyonuna gönderilir; fonksiyon talebi Turkticaret.net SMTP hesabı üzerinden `info@noratech.com.tr` adresine e-postayla iletir. Yanıtla dediğinizde doğrudan talep sahibine yazılır.
+
+Vercel'de **Project → Settings → Environment Variables** altına şu değişkenleri ekleyin, ardından **Deployments → Redeploy** yapın:
+
+| Değişken | Örnek | Açıklama |
+| --- | --- | --- |
+| `SMTP_HOST` | Turkticaret panelindeki giden posta sunucusu | SMTP sunucu adresi |
+| `SMTP_PORT` | `465` (SSL) veya `587` (STARTTLS) | Turkticaret'in önerdiği port |
+| `SMTP_USER` | `info@noratech.com.tr` | Gönderen e-posta hesabı |
+| `SMTP_PASS` | — | Bu hesabın şifresi |
+| `MAIL_FROM` | `Yankı <info@noratech.com.tr>` | İsteğe bağlı, varsayılan `SMTP_USER` |
+| `DEMO_TO` | `info@noratech.com.tr` | İsteğe bağlı, talebin gideceği adres |
+
+Sorun olursa Vercel'de **Deployments → (son yayın) → Functions → api/demo** loglarına bakın: `SMTP ayarları eksik` ya da `gönderim hatası` satırı nedeni gösterir.
+
 ## Yayın sonrası yapılacaklar
 
 - [ ] **Abonelik Başlat** (Pro paketi) butonu uygulama yayına girene kadar geçici olarak demo formuna (`#demo`) gidiyor. Uygulama adresi netleşince `<uygulama adresi>/register?plan=pro` olarak güncellenmeli.
-- [ ] **Demo talep formu** henüz bir sunucuya bağlı değil. Bir form servisi (Formspree, Vercel fonksiyonu vb.) ya da uygulamanın API'si ile bağlanmalı.
 - [ ] Uygulamada KVKK metnindeki saklama süreleri otomatik silme olarak uygulanmalı: hesap verileri kapanıştan itibaren 12 ay, taranan içerik ve raporlar 6 ay, demo talepleri 6 ay, tercih çerezi en fazla 12 ay.
 - [ ] Yasal metinler yayına almadan önce bir hukukçu tarafından gözden geçirilmeli.
 - [ ] Sitede analitik veya pazarlama çerezi kullanılmaya başlanırsa çerez onay penceresi eklenmeli ve Çerez Politikası güncellenmeli.

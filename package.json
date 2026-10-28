@@ -1,0 +1,9 @@
+{
+  "name": "yanki-web",
+  "private": true,
+  "description": "Yankı tanıtım sitesi ve demo talep fonksiyonu",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  }
+}
