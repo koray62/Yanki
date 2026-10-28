@@ -8,6 +8,10 @@ Yankı medya takip ve itibar riski platformunun tanıtım (landing) sayfası. De
 | --- | --- |
 | `index.html` | Sitenin tamamı (HTML + CSS, harici bağımlılık yok; yazı tipleri Google Fonts'tan yüklenir) |
 | `yanki-ornek-rapor.pdf` | "Örnek raporu indirin" butonlarının indirdiği örnek rapor (kurgusal veriler) |
+| `kvkk.html` | KVKK Aydınlatma Metni |
+| `gizlilik.html` | Gizlilik Politikası |
+| `cerez-politikasi.html` | Çerez Politikası |
+| `kullanim-kosullari.html` | Kullanım Koşulları |
 
 ## Yerelde açma
 
@@ -28,4 +32,6 @@ npx serve .
 - [ ] **Abonelik Başlat** (Pro paketi) butonu uygulama yayına girene kadar geçici olarak demo formuna (`#demo`) gidiyor. Uygulama adresi netleşince `<uygulama adresi>/register?plan=pro` olarak güncellenmeli.
 - [ ] **Demo talep formu** henüz bir sunucuya bağlı değil. Bir form servisi (Formspree, Vercel fonksiyonu vb.) ya da uygulamanın API'si ile bağlanmalı.
 - [ ] Footer'daki **[Şirket unvanı]** alanı doldurulmalı.
-- [ ] **KVKK Aydınlatma Metni, Gizlilik, Çerez Politikası ve Kullanım Koşulları** sayfaları hazırlanıp footer bağlantıları güncellenmeli.
+- [ ] Yasal sayfalardaki köşeli parantezli alanlar doldurulmalı: şirket unvanı, adres, MERSİS, KVKK e-posta ve KEP adresi, e-posta ve ödeme sağlayıcıları, saklama süreleri.
+- [ ] Yasal metinler yayına almadan önce bir hukukçu tarafından gözden geçirilmeli.
+- [ ] Sitede analitik veya pazarlama çerezi kullanılmaya başlanırsa çerez onay penceresi eklenmeli ve Çerez Politikası güncellenmeli.
