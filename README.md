@@ -13,6 +13,7 @@ Site iki dillidir: **İngilizce** ana adreste (`/`), **Türkçe** `/tr/` altınd
 | `privacy-notice.html`, `privacy.html`, `cookies.html`, `terms.html` | İngilizce yasal sayfalar |
 | `tr/kvkk.html`, `tr/gizlilik.html`, `tr/cerez-politikasi.html`, `tr/kullanim-kosullari.html` | Türkçe yasal sayfalar |
 | `tools/build_legal.py` | Yasal sayfaları iki dilde üreten betik |
+| `tools/sample-report/` | İki örnek raporu (Türkçe ve İngilizce) kurgusal verilerle üreten betikler; kullanım dosyanın başında |
 | `vercel.json` | Eski Türkçe yasal sayfa adreslerinden `/tr/` altına kalıcı yönlendirmeler |
 | `yanki-ornek-rapor.pdf`, `yanki-sample-report.pdf` | Türkçe ve İngilizce sayfalardaki "örnek rapor" butonlarının indirdiği raporlar (kurgusal veriler) |
 | `404.html` | Bulunamayan sayfalar için hata sayfası |
